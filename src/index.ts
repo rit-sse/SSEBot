@@ -16,6 +16,12 @@ const app = new App({
     console.log(`SSEBot started at ${new Date().toUTCString()} (UTC)`);
 })();
 
+// when a new user joins
+app.event('team_join', async ({ event, context }) => {
+    // @ts-ignore
+    console.log(`new person joined: ${event.user.id}`);
+});
+
 // for @bot messages
 app.event('app_mention', async ({ event, context }) => {
     try {
