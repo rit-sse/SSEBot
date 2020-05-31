@@ -3,6 +3,7 @@ import { getHelp } from './commands/help';
 import { sample } from "./commands/sample";
 // load in .env for local dev
 import * as dotenv from 'dotenv';
+import { welcomeMessage } from "./welcomeMessage";
 
 dotenv.config();
 
@@ -19,7 +20,13 @@ const app = new App({
 // when a new user joins
 app.event('team_join', async ({ event, context }) => {
     // @ts-ignore
-    console.log(`new person joined: ${event.user.id}`);
+    console.log(`Sending welcome message to ${event.user.id}`);
+    await app.client.chat.postMessage({
+        token: context.botToken,
+        // @ts-ignore
+        channel: event.user.id,
+        text: welcomeMessage
+    });
 });
 
 // for @bot messages
