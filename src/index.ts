@@ -13,7 +13,7 @@ const app = new App({
 });
 
 (async () => {
-    await app.start(process.env.PORT || 3000);
+    await app.start(process.env.SLACK_BOT_PORT || 3000);
     console.log(`SSEBot started at ${new Date().toUTCString()} (UTC)`);
 })();
 
