@@ -1,10 +1,10 @@
 FROM node:carbon
 
-WORKDIR /slackbot
-COPY ./package.json /slackbot/package.json
+WORKDIR /ssebot
+COPY ./package.json /ssebot/package.json
 RUN npm install --loglevel warn
 
-COPY ./ /slackbot
+COPY ./ /ssebot
 
 EXPOSE 3000
 
