@@ -4,8 +4,10 @@ orbs:
   node: circleci/node@3.0.0
 
 workflows:
-  node-tests:
+  version: 2
+  build_test:
     jobs:
+      - build
       - node/test
 
 jobs:
