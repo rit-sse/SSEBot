@@ -9,6 +9,7 @@ RUN mkdir $HOME/ssebot
 WORKDIR $HOME/ssebot
 
 RUN ls $HOME
+RUN ls $HOME/ssebot
 
 COPY ./package.json $HOME/ssebot/package.json
 RUN npm install --loglevel warn
