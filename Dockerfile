@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM circleci/node:lts
 
 WORKDIR /ssebot
 COPY ./package.json /ssebot/package.json
