@@ -13,7 +13,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: docker:17.03.0-ce
+      - image: circleci/node:carbon
     working_directory: /ssebot
 #    branches:
 #      only:
