@@ -13,7 +13,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: circleci/node:lts-stretch
+      - image: circleci/node:lts
 #    branches:
 #      only:
 #        - master
