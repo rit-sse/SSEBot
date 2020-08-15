@@ -2,9 +2,13 @@ FROM circleci/node:lts
 
 RUN echo $HOME
 RUN pwd
+RUN ls
+RUN ls $HOME
 
 RUN mkdir $HOME/ssebot
 WORKDIR $HOME/ssebot
+
+RUN ls $HOME
 
 COPY ./package.json $HOME/ssebot/package.json
 RUN npm install --loglevel warn
