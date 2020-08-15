@@ -1,21 +1,11 @@
 FROM circleci/node:lts
 
-RUN echo $HOME
-RUN pwd
-RUN ls
-RUN ls -la
-RUN ls $HOME
+WORKDIR /gdfghgfdh
 
-RUN mkdir $HOME/ssebot
-WORKDIR $HOME/ssebot
-
-RUN ls $HOME
-RUN ls $HOME/ssebot
-
-COPY ./package.json $HOME/ssebot/package.json
+COPY ./package.json /gdfghgfdh/package.json
 RUN npm install --loglevel warn
 
-COPY ./ $HOME/ssebot
+COPY ./ /gdfghgfdh
 
 EXPOSE 3000
 
