@@ -13,7 +13,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: circleci/node:carbon
+      - image: circleci/node:12
 #    branches:
 #      only:
 #        - master
