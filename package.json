@@ -14,16 +14,16 @@
   "dependencies": {
     "@slack/bolt": "^2.2.3",
     "express": "^4.17.1",
-    "superagent": "^5.3.1"
+    "superagent": "^6.0.0"
   },
   "devDependencies": {
-    "@types/mocha": "^8.0.1",
+    "@types/mocha": "^8.0.2",
     "chai": "^4.2.0",
     "chai-string": "^1.5.0",
     "cpy-cli": "^3.1.0",
     "dotenv": "^8.2.0",
-    "mocha": "^8.1.0",
-    "sinon": "^9.0.2",
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.3",
     "sinon-chai": "^3.5.0",
     "superagent-mock": "^3.7.0",
     "ts-node": "^8.10.2",
