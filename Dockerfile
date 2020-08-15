@@ -1,11 +1,11 @@
 FROM circleci/node:lts
 
-WORKDIR /ssebot
-
-COPY ./package.json /gdfghgfdh/package.json
+COPY ./package.json /ssebot/package.json
 RUN npm install --loglevel warn
 
-COPY ./ /gdfghgfdh
+COPY ./ /ssebot
+
+WORKDIR /ssebot
 
 EXPOSE 3000
 
