@@ -1,14 +1,12 @@
 FROM circleci/node:lts
 
-COPY ./package.json /ssebot/package.json
-
 WORKDIR /ssebot
+RUN chown -R $USER:$USER /ssebot
 
+COPY ./package.json /ssebot/package.json
 RUN npm install --loglevel warn
 
 COPY ./ /ssebot
-
-
 
 EXPOSE 3000
 
