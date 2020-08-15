@@ -1,5 +1,7 @@
 FROM node:carbon
 
+RUN mkdir -p /ssebot
+
 WORKDIR /ssebot
 COPY ./package.json /ssebot/package.json
 RUN npm install --loglevel warn
