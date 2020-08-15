@@ -1,7 +1,7 @@
 FROM circleci/node:lts
 
 WORKDIR /ssebot
-RUN chown -R $USER: /ssebot
+RUN chown -R $USER:$USER /ssebot
 
 COPY ./package.json /ssebot/package.json
 RUN npm install --loglevel warn
