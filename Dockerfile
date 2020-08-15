@@ -1,12 +1,11 @@
 FROM node:carbon
 
-RUN mkdir -p /ssebot
 
-WORKDIR /ssebot
-COPY ./package.json /ssebot/package.json
+WORKDIR /testdir
+COPY ./package.json /testdir/package.json
 RUN npm install --loglevel warn
 
-COPY ./ /ssebot
+COPY ./ /testdir
 
 EXPOSE 3000
 
