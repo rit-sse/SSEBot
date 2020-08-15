@@ -1,6 +1,6 @@
 FROM circleci/node:lts
 
-WORKDIR /gdfghgfdh
+WORKDIR /ssebot
 
 COPY ./package.json /gdfghgfdh/package.json
 RUN npm install --loglevel warn
