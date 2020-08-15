@@ -3,7 +3,7 @@ FROM circleci/node:lts
 RUN echo $HOME
 RUN pwd
 RUN ls
-RUN ls ./
+RUN ls -la
 RUN ls $HOME
 
 RUN mkdir $HOME/ssebot
