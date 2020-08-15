@@ -3,11 +3,13 @@ FROM circleci/node:lts
 RUN echo $HOME
 RUN pwd
 
-WORKDIR /ssebot1
-COPY ./package.json /ssebot2/package.json
+RUN mkdir /ssebot
+WORKDIR /ssebot
+
+COPY ./package.json /ssebot/package.json
 RUN npm install --loglevel warn
 
-COPY ./ /ssebot3
+COPY ./ /ssebot
 
 EXPOSE 3000
 
