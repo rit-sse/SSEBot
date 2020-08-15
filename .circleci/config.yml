@@ -20,7 +20,7 @@ jobs:
 #        - master
 #        - devlop
     steps:
-#      - setup_remote_docker
+      - setup_remote_docker
       - run:
           name: Show Info
           command: |
