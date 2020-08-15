@@ -14,7 +14,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:carbon
-    working_directory: /ssebot
 #    branches:
 #      only:
 #        - master
