@@ -1,14 +1,12 @@
-FROM circleci/node:lts
+FROM node:12
 
 WORKDIR /ssebot
-RUN chown -R $USER:$USER /ssebot
 
-COPY ./package.json /ssebot/package.json
-RUN npm install --loglevel warn
+COPY package*.json ./
+ENV NODE_ENV=production
+RUN npm i --loglevel warn
 
-COPY ./ /ssebot
-
+COPY . .
 EXPOSE 3000
 
-ENV NODE_ENV=production
-RUN npm start
+CMD ["npm", "start"]
