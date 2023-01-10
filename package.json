@@ -12,7 +12,7 @@
     "ts_test": "mocha -r ts-node/register tests/**/*.spec.ts"
   },
   "dependencies": {
-    "@slack/bolt": "^2.2.3",
+    "@slack/bolt": "^3.12.2",
     "express": "^4.17.1",
     "superagent": "^6.0.0"
   },
